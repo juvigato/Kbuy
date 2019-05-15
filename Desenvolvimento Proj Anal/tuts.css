@@ -1,0 +1,33 @@
+nav{
+            padding-top: 50px;
+            padding-left: 500px;
+        }
+        nav ul li{
+            font-size: 25px;
+            padding: 50px 10px 10px 10px;
+            display: inline;
+            list-style: none;
+        }
+        nav li{
+            position: relative;
+            float: left;
+        }
+        nav li a{
+            padding: 50px 10px 10px 10px;
+            color: #000;
+            text-decoration: none;
+        }
+        nav li a:hover{
+            padding:px 10px 10px 10px;
+            background-color: skyblue;
+        }
+        nav li ul{
+            position: absolute;
+            top: 90px;
+            left: 0;
+            display: none;
+        }
+        nav li:hover ul,
+        nav li.over ul{
+            display:block;
+        }

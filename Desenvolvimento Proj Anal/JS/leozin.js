@@ -1,0 +1,1 @@
+$(".sub-menu a").one("click", false);

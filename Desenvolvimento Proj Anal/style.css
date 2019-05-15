@@ -1,0 +1,168 @@
+nav {    
+    display: block;
+    text-align: center;
+  }
+  nav ul {
+    margin: 0;
+    padding:0;
+    list-style: none;
+  }
+  .nav a {
+    display:block; 
+    background: rgb(175,199,231); 
+    color:#fff; 
+    text-decoration: none;
+    padding: .8em 1.8em;
+    text-transform: uppercase;
+    font-size: 80%;letter-spacing: 2px;
+    position: relative;
+  }
+  .nav{  
+    vertical-align: top; 
+    display: inline-block;
+    border-radius:6px;
+  }
+  .nav li{
+      position: relative;
+      width: 200px;
+}
+  .nav > li { 
+    float:left; 
+    border-bottom: 4px #aaa solid; 
+    margin-right: 1px; 
+  } 
+  .nav > li > a { 
+    margin-bottom:1px;
+  }
+  .nav > li:hover , .nav > li:hover >a{  
+      border-bottom-color:black;
+}
+
+  .nav li:hover > a { color:black; }
+  .nav > li:first-child  { border-radius: 4px 0 0 4px;} 
+  .nav > li:first-child>a{border-radius: 4px 0 0 0;}
+  .nav > li:last-child  { 
+    border-radius: 0 0 4px 0; 
+    margin-right: 0;
+  } 
+  .nav > li:last-child >a{border-radius: 0 4px 0 0; }
+  .nav li li a { margin-top:1px}
+  
+  
+  
+nav li a:first-child:nth-last-child(2):before { 
+     content:""; 
+     position: absolute; 
+     height:0; 
+     width: 0; 
+     border: 5px solid transparent; 
+     top: 50% ;
+     right:5px;  
+}
+   
+   /* submenu positioning*/
+.nav ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid  black;
+  z-index: 1;
+  left: -99999em;
+}
+.nav > li:hover > ul {
+  left: auto;
+  padding-top: 5px  ;
+  min-width: 100%;
+}
+.nav > li li ul {  border-left:1px solid #fff;}
+
+
+.nav > li li:hover > ul { 
+ /* margin-left: 1px */
+  left: 100%;
+  top: -1px;
+}
+
+.top{ 
+    background-color: #AAC8EA;
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.footer{
+    margin-top: 200px;
+    background-color: #AAC8EA;
+    position:relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding:0;
+}
+
+img{
+    width: 50px;
+    height: 40px;
+}
+
+.imagemTopoE{
+    float: left;
+    margin: 5px;
+}
+
+.imagemTopoD{
+    float: right;
+    margin: 5px;
+}
+
+.imagemD{
+    float: right;
+    margin: 5px;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+input {
+  font-family: monospace;
+}
+label {
+  display: block;
+}
+div {
+  margin: 0 0 1rem 0;
+}
+
+.textoTopoD{
+    float:right;
+    margin-right: 150px;
+}
+
+.textoTopoD2{
+    float:right;
+    margin-right: 50px;
+}
+
+/* Carrosel */
+
+.mySlides {
+    display:none;
+    width: 1000px;
+    height: 500px;
+}
+.w3-left, .w3-right, .w3-badge {
+    cursor:pointer;
+}
+.w3-badge {
+    height:13px; 
+    width:13px;
+    padding:0;
+}
