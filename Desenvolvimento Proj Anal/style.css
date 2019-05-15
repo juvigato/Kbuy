@@ -95,8 +95,6 @@ nav li a:first-child:nth-last-child(2):before {
     margin-top: 200px;
     background-color: #AAC8EA;
     position:relative;
-    left: 0;
-    bottom: 0;
     width: 100%;
     text-align: center;
     padding:0;
@@ -151,6 +149,15 @@ div {
     margin-right: 50px;
 }
 
+.meio1{
+    margin-left: 400px;
+    float: left;
+}
+
+.meio2{
+    margin-left: 800px;
+}
+
 /* Carrosel */
 
 .mySlides {
@@ -162,7 +169,7 @@ div {
     cursor:pointer;
 }
 .w3-badge {
-    height:13px; 
-    width:13px;
+    height:20px; 
+    width:20px;
     padding:0;
 }

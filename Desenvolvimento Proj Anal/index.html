@@ -19,17 +19,17 @@
               
     </head>
     <body>
-        <ul class = "top">
+        <div class = "top">
             <figure>
                 <img src="img/brasil.png" alt="Bandeira Brasil" class = "imagemTopoE"/ title="Bandeira do Brasil">
                 <img src="img/eua.png" alt="Bandeira EUA" class = "imagemTopoE" title="Bandeira dos EUA"/>
                 <img src="img/coreia.png" alt="Bandeira Coreia"class = "imagemTopoE" title="Bandeira da Coreia do Sul"/>
                 <img src="img/carrinho.png" alt="Carrinho de compras" class = "imagemTopoD"  title="Ícone de carrinho"/>
             </figure>
-            <li><a href="index.html"><h1>K-buy</h1></a></li>
-            <li class = "textoTopoD"><h3>Cadastrar</h3></li>
-            <li class = "textoTopoD2"><h3>Login</h3></li>
-        </ul>    
+            <a href="index.html"><h1>K-buy</h1></a>
+            <a class = "textoTopoD"><h3>Cadastrar</h3></a>
+            <a class = "textoTopoD2"><h3>Login</h3></a>
+        </div>    
         <nav>
             <ul class = "nav"> <!-- era "menu"-->
                 <li><a href="#">Home</a></li>
@@ -54,15 +54,17 @@
         </nav>
         <br><br>
         <div class="w3-content w3-display-container" style="max-width:1000px">
-            <img class="mySlides" src="img/Ghibli%20Characters.jpg">
-            <img class="mySlides" src="img/Howl's%20Moving%20Castle%20.jpg">
-            <img class="mySlides" src="img/Mononoke%20Shishigami.jpg">
+            <img class="mySlides" src="img/blackpink.jpg">
+            <img class="mySlides" src="img//bts.jpg">
+            <img class="mySlides" src="img/exo.png">
+            <img class="mySlides" src="img/twice.jpg">
             <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
                 <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
                 <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
                 <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
                 <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
                 <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
             </div>
         </div>
         
@@ -93,6 +95,8 @@
                 <label for="campo7">Telefone</label>
     <input oninput="mascara(this, 'tel')" id="campo7" type="text" class="form-control" placeholder="Ex.: xxxxx-xxxx" autocomplete="off" name="customer['tel']">
             </div>
+            <br>
+            <br>
             <div class="button">
                 <button type="submit">Confirmar</button>
             </div>
