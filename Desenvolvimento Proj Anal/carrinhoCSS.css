@@ -1,0 +1,43 @@
+#carrinhoVazioText{
+    text-align: center;
+    vertical-align:baseline;
+}
+
+.divCarrinho{
+    background-color: #D3D3D3;
+    height: 100px;
+    width: 95%;
+    /*alinhar div no meio*/
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.backBegin{
+    margin-left: 35px;
+}
+
+.heartImg{
+    width: 70px;
+    height: 70px;
+    float: left;
+    /*alinhar img no meio*/
+}
+
+.caractProd{
+    float: left;
+    text-align: center;
+    margin-left: 200px;
+}
+
+#divTotal{
+    float: right;
+    margin-right: 35px;
+}
+
+#divTotal button{
+    margin-top: 10px;
+}
+
+#totalField{
+    margin-top: 10px;
+}
