@@ -1,0 +1,48 @@
+.fotoPerfil{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+}
+
+h4{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttons{
+    width: 100%;
+    border: 3px solid #73AD21;
+    display: block;
+    padding-left: 41.5%;
+}
+
+#div p:first-child{
+    float: left;
+    margin-left: 600px;
+}
+
+#div p{
+    float: left;
+}
+
+#div{
+    width: 100%;
+}
+
+#div img{
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.footerPerfil{
+    margin-top: 200px;
+    background-color: #AAC8EA;
+    position:relative;
+    width: 100%;
+    text-align: center;
+    padding:0;
+    margin-bottom: 0;
+}
