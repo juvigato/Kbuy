@@ -127,9 +127,7 @@ img{
     height: 40px;
 }
 
-h2{
-    text-align: center;
-}
+
 
 h1{
     margin: auto;
@@ -263,3 +261,16 @@ p{
 .recentes{
     margin-left: 150px;
 }
+
+ /*
+.bb{
+    display: block;
+    border-style: solid;
+    border-width: 5px;
+    height: 340px;
+    width: 300px;
+    background-color: #EDEDED;
+}
+ */
+
+
