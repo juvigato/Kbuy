@@ -91,6 +91,8 @@ nav li a:first-child:nth-last-child(2):before {
     padding: 0;
 }
 
+/*  FOOTER  */
+
 .footer{
     margin-top: 400px;
     background-color: #AAC8EA;
@@ -100,6 +102,7 @@ nav li a:first-child:nth-last-child(2):before {
     padding:0;
     margin-bottom: 0;
 }
+/* -- */
 
 img{
     width: 125px;
