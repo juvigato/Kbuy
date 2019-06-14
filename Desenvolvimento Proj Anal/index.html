@@ -27,11 +27,14 @@
                 <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho de compras" class = "imagemTopoD"  title="Ícone de carrinho"/></a>
             </figure>
             <a href="index.html"><h1>K-buy</h1></a>
-            <a href="add.html" class = "textoTopoD"><h3>Cadastrar</h3></a>
-            <a class = "textoTopoD2"><h3>Login</h3></a>
+            <a href="register.php" class = "textoTopoD"><h3>Cadastrar</h3></a>
+            <a href="login.php" class = "textoTopoD2"><h3>Login</h3></a>
         </div>
         <div class="topnav">
-            <input type="text" placeholder="Search...">
+            <form action="search.php" method="GET">
+                <input type="text" name="query" placeholder="Search...">
+                <input type="submit" value="Search"/>
+            </form>
         </div>
         
         <nav>
@@ -74,7 +77,9 @@
         </div>
         <h2>Mais Recentes</h2>
         <div class = "recentes">
+            
             <div><a href="#"><img src="img//bts/album1.jpg" alt="Álbum 'Love Yorself' BTS"/>Álbum 'Love Yorself' BTS</a></div>
+            
             <div><a href="#"><img src="img//bts/cards1.jpg" alt="Cards 'Love Yourself E' BTS"/>Cards 'Love Yourself E' BTS</a></div>
             <div><a href="#"><img src="img//bts/poster1.jpg" alt="Poster BTS"/>Poster BTS</a></div>
             <div><a href="#"><img src="img//bts/chaveiro1.jpg" alt="Chaveiros Integrantes BTS"/>Chaveiros Integrantes BTS</a></div>

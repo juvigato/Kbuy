@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
     <!--comentário-->
@@ -10,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         
-        <link rel="stylesheet" type="text/css" href="telaBts.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
         <script type="text/javascript" src="JS/leozin.js"></script>
         <script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
@@ -30,9 +31,8 @@
             <a href="register.php" class = "textoTopoD"><h3>Cadastrar</h3></a>
             <a href="login.php" class = "textoTopoD2"><h3>Login</h3></a>
         </div>
-        
         <div class="topnav">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Procurar...">
         </div>
         
         <nav>
@@ -59,76 +59,24 @@
             </ul>
         </nav>
         <br><br>
-        <div class="w3-content w3-display-container" style="max-width:1000px">
-            <a href="telaBlackPink.html"><img class="mySlides" src="img//blackpink/blackpink5.png"></a>
-        </div>
-        <h2>BlackPink</h2>
-        <div class = "light">
-            <h3>Light Stickers</h3>
-            <div><a href="#"><img src="img/blackpink/light1.png" alt="Light Sticker BTS(usado)"/>Light Sticker BTS(usado)</a></div>
-        </div>
-        <div class="footer">
-        <table>
-            <tbody>
-                <tr>
-                    <td>Contato</td>
-                    <td>Horário de Atendimento</td>
-                    <td>Siga a gente!</td>
-                </tr>
-                <tr>
-                    <td>(011)4485-9877</td>
-                    <td>Segunda a Sexta 8h - 16h(BRT)</td>
-                    <td><a href="https://twitter.com/login?lang=pt" class="link" target="_blank">Twitter</a></td>
-                </tr>
-                <tr>
-                    <td>contato@kbuy.com</td>
-                    <td></td>
-                    <td><a href="https://pt-br.facebook.com/" class="link" target="_blank">Facebook</a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><a href="https://www.instagram.com/?hl=pt-br" class="link" target="_blank">Instagram</a></td>
-                </tr>
-                     
-            </tbody>
-        <figure>
-            <img src="img/notas.png" alt="Nota de dinheiro" class = "imagemD" title="Ícone de pagamento em dinheiro"/>
-            <img src="img/pay.png" alt="Simbolo PayPal" class = "imagemD" title="Icone do PayPal"/>
-        </figure>
-        </table>
-        
-        </div>
-        
-    </body>
+  <div class="header">
+  	<h2>Login</h2>
+  </div>
+	 
+  <form method="post" action="login.php">
+  	<?php include('errors.php'); ?>
+
+
+  		<label>Username:</label>
+  		<input type="text" name="username" >
+
+  		<label>Password:</label>
+  		<input type="password" name="password">
+
+  		<button type="submit" class="btn" name="login_user">Login</button>
+  	<p>
+  		Não é um membro ainda? <a href="register.php">Cadastre-se</a>
+  	</p>
+  </form>
+</body>
 </html>
-<script>  
-    
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
-
-    function currentDiv(n) {
-        showDivs(slideIndex = n);
-    }
-
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" w3-white", "");
-        }
-        x[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " w3-white";
-    }
-            
-        </script>

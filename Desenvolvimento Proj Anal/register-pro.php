@@ -1,3 +1,15 @@
+<?php include('server.php');
+
+    if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+  }
+ ?>
 <!DOCTYPE html>
 <html>
     <!--comentário-->
@@ -10,7 +22,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         
-        <link rel="stylesheet" type="text/css" href="telaProduto.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
         <script type="text/javascript" src="JS/leozin.js"></script>
         <script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
@@ -27,12 +39,14 @@
                 <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho de compras" class = "imagemTopoD"  title="Ícone de carrinho"/></a>
             </figure>
             <a href="index.html"><h1>K-buy</h1></a>
-            <a href="register.php" class = "textoTopoD"><h3>Cadastrar</h3></a>
-            <a href="login.php" class = "textoTopoD2"><h3>Login</h3></a>
+            <?php  if (isset($_SESSION['username'])) ?>
+              <p>Bem Vindo! <strong><?php echo $_SESSION['username']; ?></strong></p>
+              <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+
+
         </div>
-        
         <div class="topnav">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Procurar...">
         </div>
         
         <nav>
@@ -59,50 +73,34 @@
             </ul>
         </nav>
         <br><br>
-        <div class="prod">
-        <img src="img/bts.jpg">
-        <p>R$45,00</p>
-        </div>
-        <div class="descricao">
-        <h3>Álbum 'Skool Luv Affair' BTS</h3>
-        <p>1 produto em estoque</p>
-        <p>Skool Luv Affair é um álbum da banda BTS. Está em ótimo estado e foi comprado em 2014.</p>
-            <div class = "buttons">
-            <button> Adicionar no carrinho </button>
-            </div>
-        </div>
-        <div class="footer">
-        <table>
-            <tbody>
-                <tr>
-                    <td>Contato</td>
-                    <td>Horário de Atendimento</td>
-                    <td>Siga a gente!</td>
-                </tr>
-                <tr>
-                    <td>(011)4485-9877</td>
-                    <td>Segunda a Sexta 8h - 16h(BRT)</td>
-                    <td><a href="https://twitter.com/login?lang=pt" class="link" target="_blank">Twitter</a></td>
-                </tr>
-                <tr>
-                    <td>contato@kbuy.com</td>
-                    <td></td>
-                    <td><a href="https://pt-br.facebook.com/" class="link" target="_blank">Facebook</a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><a href="https://www.instagram.com/?hl=pt-br" class="link" target="_blank">Instagram</a></td>
-                </tr>
-                     
-            </tbody>
-        <figure>
-            <img src="img/notas.png" alt="Nota de dinheiro" class = "imagemD" title="Ícone de pagamento em dinheiro"/>
-            <img src="img/pay.png" alt="Simbolo PayPal" class = "imagemD" title="Icone do PayPal"/>
-        </figure>
-        </table>
-        
-        </div>
-        
-    </body>
+  <div class="header">
+  	<h2>Cadastrar Produto </h2>
+  </div>
+	
+  <form method="post" action="register-pro.php">
+  	<?php include('errors.php'); ?>
+
+  	  <label>Nome do Produto </label>
+  	  <input type="text" name="nome_pro" value="<?php echo $nome_pro; ?>">
+
+
+  	  <label>Tipo Produto</label>
+  	  <input type="tex" name="tipo" value="<?php echo $tipo; ?>">
+
+      <label>Preço:</label>
+      <input type="text" name="preco_produto" value="<?php echo $preco_produto; ?>">
+
+      <label>Tags:</label>
+      <input type="text" name="tags" value="<?php echo $tags; ?>">
+
+      <label>Quantidade:</label>
+      <input type="text" name="quantidade" value="<?php echo $quantidade; ?>">
+
+  	  <button type="submit" class="btn" name="reg_pro">Cadastrar Produto</button>
+
+  	<p>
+  		Quer ver seus produtos cadastrados? <a href="muda-pro.php">Veja Aqui!</a>
+  	</p>
+  </form>
+</body>
 </html>
